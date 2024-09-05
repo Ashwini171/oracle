@@ -1,0 +1,56 @@
+# Create Table:
+- CREATE TABLE statement
+-CREATE TABLE table_name  
+(   
+  column1 datatype [ NULL | NOT NULL ],  
+  column2 datatype [ NULL | NOT NULL ],  
+  ...  
+  column_n datatype [ NULL | NOT NULL ]  
+);  
+-CREATE TABLE Customers
+(
+    c_name varchar(10) NOTNULL,
+    c_id number NOTNULL);
+----------------------------------------------------------------
+#Create table with Primary key:
+-Primary Key: field that contain unique value it can not be null.
+_ CREATE TABLE Customers
+(
+    c_name varchar(10) NOTNULL,
+    c_id number NOTNULL
+    CONSTRAINT c_pk PRIMARY KEY (c_id);
+----------------------------------------------------------------
+#Create Table As:
+-Basically use to copy one table data to another table.
+-CREATE TABLE new_table  
+ AS (SELECT * FROM old_table);   
+-----------------------------------------------------------------
+#ALTER TABLE:
+- using this we can add modify and delete like addimg deleting new cols.
+- adding multiple col to the existing table 
+-----------------------------------------------------------------
+-ALTER TABLE table_name  
+  ADD (column_1 column-definition,  
+       column_2 column-definition,  
+       ...  
+       column_n column_definition);
+-MODIFY ADD DROP RENAME
+-ALTER TABLE table_name  
+  RENAME TO new_table_name;   
+-----------------------------------------------------------------
+# DROP TABLE:
+-use to delete and remove table from db
+- DROP TABLE Table_name;
+--------------------------------------------------------------------
+#Global Table temporary:
+-temporary tables can't have foreign keys related to other tables.
+-CREATE GLOBAL TEMPORARY TABLE students  
+( student_id numeric(10) NOT NULL,  
+  student_name varchar2(50) NOT NULL,  
+  student_address varchar2(50)  
+);  
+--------------------------------------------------------------------
+#View:
+- physical table that does not physically exist.
+- it store data in  dictionary.
+-
