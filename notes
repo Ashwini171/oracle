@@ -54,3 +54,14 @@ _ CREATE TABLE Customers
 - physical table that does not physically exist.
 - it store data in  dictionary.
 -
+------------------------------------------------------------------
+Query:
+1. Select: fetch the records from database.
+- SELECT expressions FROM tables  WHERE conditions;  
+2. Insert: use to insert single or multiple data into db.
+- INSERT INTO table_name (cols) VALUES (values);
+- we can insert data with help of SELECT query.
+- INSERT INTO table_name (cols) SELECT expressions FROM tables  WHERE conditions;
+3.INSERT ALL: use to insert the multiple rows in db.
+
+
